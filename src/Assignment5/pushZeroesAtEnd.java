@@ -17,4 +17,19 @@ public class pushZeroesAtEnd {
             System.out.println(arr[i]);
         }
     }
+    
+    public static void printArray(int[] arr) {
+        for (int element : arr) {
+            System.out.print(element + " ");
+        }
+
+        System.out.println();
+    }
+
+public static void main(Strings args[]) {
+    
+    int[] input = takeInput();
+            pushZerosAtEnd(input);
+            printArray(input);  
+    }
 }
