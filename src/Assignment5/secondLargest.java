@@ -14,36 +14,19 @@ public class secondLargest {
         }
         return max2;
     }
+    
+     public static void printArray(int[] arr) {
+        for (int element : arr) {
+            System.out.print(element + " ");
+        }
+
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+            int[] input = takeInput();
+            Solution.pushZerosAtEnd(input);
+            printArray(input);
+        }
 }
-
-   /* public static int secondLargestElement(int[] a) {
-
-        int temp = Integer.MIN_VALUE;
-        int n = a.length;
-
-        if (n == 0) {
-            return Integer.MIN_VALUE;
-        }
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if (a[i] > a[j]) {
-
-                    temp = a[i];
-                    a[i] = a[j];
-                    a[j] = temp;
-                } else if (areSame(a)) {
-                    return temp;
-                }
-            }
-        }
-        return a[n - 2];
-    }
-
-    public static boolean areSame(int a[]) {
-        int first = a[0];
-        for (int i = 1; i < a.length; i++)
-            if (a[i] != first)
-                return false;
-        return true;
-    }
-}*/
