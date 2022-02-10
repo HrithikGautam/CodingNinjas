@@ -18,13 +18,11 @@ public class isfibonacci {
             Scanner s = new Scanner(System.in);
             int n = s.nextInt();
 
-            System.out.println(fibonacci_num_check(n) ? "true" :
-                     "false");
+            System.out.println(fibonacci_num_check(n) ? "true" :"false");
 
-
-            /*for (int i = 6; i <= 17; i++)
+            for (int i = 6; i <= 17; i++)
                 System.out.println(fibonacci_num_check(i) ? i + " is a Fibonacci number" :
-                        i + " is a not Fibonacci number");*/
+                        i + " is a not Fibonacci number");
         }
     }
 
