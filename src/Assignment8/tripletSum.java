@@ -16,9 +16,6 @@ public class tripletSum {
 
         return count;
     }
-
-
-
     public static int pairSum(int[] arr, int num, int i){
         //Arrays.sort(arr);
         int j=arr.length-1,c=0;
@@ -52,5 +49,4 @@ public class tripletSum {
         }
         return c;
     }
-
 }
