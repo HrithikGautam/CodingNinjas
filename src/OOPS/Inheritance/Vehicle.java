@@ -1,23 +1,27 @@
 package OOPS.Inheritance;
 
 public class Vehicle {
-    void print() {
-        System.out.print("Vehicle class");
-    }
-}
-class Car extends Vehicle{
-    void print(){
-        System.out.print("Car class ");
-    }
-}
 
-class Main1 {
-    public static void main(String[] args){
-        Vehicle obj1 = new Car();
-        obj1.print();
+    private String color;
+    protected int maxSpeed;
 
-        Vehicle obj2 = new Vehicle();
-        obj2.print();
+    public Vehicle(int maxSpeed) {
+        System.out.println("Vehicle's Constructor");
+        this.maxSpeed = maxSpeed;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void print() {
+
+        System.out.println("Vehicle" + "color" + color + "maxSpeed" + maxSpeed);
+
     }
 }
 
