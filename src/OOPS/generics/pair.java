@@ -1,13 +1,16 @@
 package OOPs.generics;
 
-public class pair<T> {
+public class pair<T,S> {
     
     private T first;
-    private T second;
+    private S second;
+
+    public pair(){              //default constructor
+    }
     
-    public pair(T first,  T second){
+    public pair(T first,  S second){
         this.first=first;
-        this.second=second;
+        this.second=  second;
     }
     
     public T getFirst(){
@@ -17,10 +20,10 @@ public class pair<T> {
         this.first=first;
     }
 
-    public T getSecond(){
+    public S getSecond(){
         return second;
     }
-    public void setSecond(T second){
+    public void setSecond(S second){
         this.second=second;
     }
 }
