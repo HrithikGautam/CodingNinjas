@@ -42,15 +42,43 @@ public class LinkedListUseR {
     }
 
 
+    public static LinkedListNode<Integer> deleteNodeRec(LinkedListNode<Integer> head, int pos) {
+        // If linked list is empty
+        if (head == null)
+            return null;
+        // Base case (start needs to be deleted)
+        if (pos == 0) {
+            return head.next;
+        }
+        head.next = deleteNodeRec(head.next, pos-1);
+        return head;
+    }
+
         public static Node<Integer> midPoint(Node<Integer> head) {
         //Your code goes here
-        Node<Integer> slow = head , fast = head;
+            if (head == null)
+                return head;
+            Node<Integer> fastptr = head.next;
+            Node<Integer> slowptr = head;
+
+            // Move fastptr by two and slow ptr by one
+            // Finally slowptr will point to middle node
+            while (fastptr != null) {
+                fastptr = fastptr.next;
+                if (fastptr != null) {
+                    slowptr = slowptr.next;
+                    fastptr = fastptr.next;
+                }
+            }
+            return slowptr;
+        }
+          /*  Node<Integer> slow = head , fast = head;
         while(fast.next != null && fast.next.next != null){
             slow=slow.next;
             fast=fast.next.next;
         }
         return slow;
-    }
+    }*/
 
         public static Node<Integer> merge(Node<Integer> head1 ,Node<Integer> head2 ){
         Node<Integer> t1 = head2 , t2 = head2;
