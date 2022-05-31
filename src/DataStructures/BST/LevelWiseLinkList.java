@@ -21,8 +21,6 @@ Sample Output 1:
 */
 import java.util.*;
 
-public class LevelWiseLinkList {
-
     /*
      * BinaryTreeNode class
      *
@@ -38,7 +36,7 @@ public class LevelWiseLinkList {
      *  }
      */
 
-
+public class LevelWiseLinkList {
 
     private static ArrayList<LinkedListNode<Integer>> arr = new ArrayList<LinkedListNode<Integer>>();
     public static ArrayList<LinkedListNode<Integer>> constructLinkedListForEachLevel(BinaryTreeNode<Integer> root){
@@ -65,9 +63,7 @@ public class LevelWiseLinkList {
                     tail.next=null;
                     tail=tail.next;
                     head=null;
-
                 }
-
             }
             else
             {
@@ -91,5 +87,4 @@ public class LevelWiseLinkList {
         }
         return arr;
     }
-
 }

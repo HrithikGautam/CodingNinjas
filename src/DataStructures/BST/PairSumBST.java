@@ -69,15 +69,13 @@ Sample Output 1:
             ArrayList<Integer> arr = new ArrayList<Integer>();
             return arr;
         }
-
-
         ArrayList<Integer> currArr = new ArrayList<Integer>();
+
         ArrayList<Integer> leftArr = convertToArray(root.left);
         if (!leftArr.isEmpty())
         {
             currArr.addAll(leftArr);
         }
-
         currArr.add(root.data);
 
         ArrayList<Integer> rightArr = convertToArray(root.right);
